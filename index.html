@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--~~~~~~~~~~~~~~~ Favicon ~~~~~~~~~~~~~~~-->
+    <link rel="shortcut icon" href="img/favicon-bread.png" type="image/x-icon" />
+
+    <!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--~~~~~~~~~~~~~~~ Remix Icon ~~~~~~~~~~~~~~~-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--  Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
+    <!--~~~~~~~~~~~~~~~ CSS ~~~~~~~~~~~~~~~-->
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <title>BreadBasket</title>
+  </head>
+  <body>
+    <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
+    <header class="bg-primaryColor dark:bg-darkColor fixed top-0 left-0 w-full z-50" id="header">
+      <nav class="container relative h-14 flex justify-between items-center">
+        <div>
+          <a href="#" class="text-2xl uppercase  font-oswald">
+            Bread<span class="text-secondaryColor">Basket</span>
+          </a>
+        </div>
+
+        <div class="hidden absolute top-0 left-0 w-full py-14 bg-primaryColor dark:bg-darkColor border-b border-secondaryColor md:block md:static md:py-0 md:border-none md:w-auto md:ml-auto" id="nav-menu">
+          <ul class="flex flex-col text-center gap-5 md:flex-row">
+            <li>
+              <a href="#home" class="nav__link text-secondaryColor hover:text-secondaryColor ease-in duration-200">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="nav__link hover:text-secondaryColor ease-in duration-200">About Us</a>
+            </li>
+            <li>
+              <a href="#menu" class="nav__link hover:text-secondaryColor ease-in duration-200">Products</a>
+            </li>
+            <li>
+              <a href="#review" class="nav__link hover:text-secondaryColor ease-in duration-200">Review</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav__link hover:text-secondaryColor ease-in duration-200">Contact</a>
+            </li>
+          </ul>
+
+          <div class="absolute top-[0.7rem] right-4 text-2xl cursor-pointer md:hidden" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-5">
+          <i class="ri-moon-line cursor-pointer ml-4 text-xl" id="theme-toggle"></i>
+
+          <div class="md:hidden" id="hamburger">
+            <i class="ri-menu-2-line cursor-pointer text-xl"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!--~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~-->
+      <section id="home">
+        <div class="container flex flex-col items-center gap-10 md:flex-row">
+          <div class="mx-auto md:basis-1/2 lg:basis-2/5 animate-movingY">
+            <img src="./img/basket-bread-removebg-preview.png" alt="home image" class="home__image w-60 md:w-full">
+          </div>
+
+          <div class="home__content text-center md:basis-1/2 md:text-start lg:basis-3/5">
+            <h1 class="home__title">BREAD THAT DELIGHTS EVERY SINGLE BITE.</h1>
+            <div class="separator mx-auto md:mx-0"></div>
+            <p class="paragraph">Welcome to our online bread haven! Explore a delectable world of freshly baked artisanal bread, where every loaf is crafted with passion and tradition. From rustic sourdoughs to sweet pastries, we offer a diverse selection to satisfy every craving. Order now and experience the ultimate in bread bliss, delivered right to your doorstep.</p>
+            <div class="text-base flex items-center justify-center gap-4 py-10 md:justify-start md:gap-20">
+              <div class="text-center">
+                <i class="fa-solid fa-utensils text-secondaryColor text-4xl"></i>
+                <br />
+                Delicious
+              </div>
+
+              <div class="text-center">
+                <i class="fa-solid fa-droplet text-secondaryColor text-4xl"></i>
+                <br />
+                Fresh
+              </div> 
+
+              <div class="text-center">
+                <i class="fa-brands fa-envira text-secondaryColor text-4xl"></i>
+                <br />
+                Organic
+              </div>
+            </div>
+
+            <a href="#" class="btn btn-primary text-white">learn more</a>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Category ~~~~~~~~~~~~~~~-->
+      <section id="category">
+        <div class="container flex flex-col gap-5 md:flex-row">
+          <!-- card 1 -->
+          <div class="category__card bg-secondaryColor flex py-3 rounded-lg overflow-hidden md:flex-1">
+            <div class="basis-1/3 relative">
+              <img src="img/category1.png" alt="category image" class="absolute w-28 -bottom-4 -left-4">
+            </div>
+
+            <div>
+              <div class="mb-2">
+                <h4 class="card__title">Bread</h4>
+                <p class="text-xs">Explore a world of delicious bread varieties.</p>
+              </div>
+
+              <a href="#" class="text-blackColor cursor-pointer">Buy online</a>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <!-- <div class="category__card bg-redColor flex py-3 rounded-lg overflow-hidden md:flex-1">
+            <div class="basis-1/3 relative">
+              <img src="img/category3.png" alt="category image" class="absolute w-28 -bottom-4 -left-4">
+            </div>
+
+            <div class="category__card bg-category2 flex py-3 rounded-lg overflow-hidden md:flex-1">
+              <div class="mb-2">
+                <h4 class="card__title">Cookies</h4>
+                <p class="text-xs">Savor irresistible cookies, baked to perfection.</p>
+              </div>
+
+              <a href="#" class="text-secondaryColor cursor-pointer">Buy online</a>
+            </div>
+          </div> -->
+
+          <!-- card 2 -->
+          <div class="category__card bg-category2 flex py-3 rounded-lg overflow-hidden md:flex-1">
+            <div class="basis-1/3 relative">
+              <img src="img/category3.png" alt="category image" class="absolute w-28 -bottom-4 -left-4">
+            </div>
+
+            <div>
+              <div class="mb-2">
+                <h4 class="card__title">Cookies</h4>
+                <p class="text-xs">Savor irresistible cookies, baked to perfection.</p>
+              </div>
+
+              <a href="#" class="text-secondaryColor cursor-pointer">Buy online</a>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+          <div class="category__card bg-secondaryColor flex py-3 rounded-lg overflow-hidden md:flex-1">
+            <div class="basis-1/3 relative">
+              <img src="img/category2.png" alt="category image" class="absolute w-28 -bottom-4 -left-4">
+            </div>
+
+            <div>
+              <div class="mb-2">
+                <h4 class="card__title">Doughnut</h4>
+                <p class="text-xs">Delight in the heavenly taste of our delectable doughnuts.</p>
+              </div>
+
+              <a href="#" class="text-blackColor  cursor-pointer">Buy online</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Promo ~~~~~~~~~~~~~~~-->
+      <section id="promo">
+        <div class="container flex flex-col gap-5 lg:gap-10 lg:flex-row">
+          <!-- card 1 -->
+          <div class="promo__card-1 bg-primaryColorLight dark:bg-darkColorLight flex flex-col p-5 rounded-lg md:flex-row md:items-center lg:flex-row-reverse lg:flex-1">
+            <img src="img/promo2.png" alt="promo image" class="w-40 mx-auto hover:animate-movingY md:mx-5">
+
+            <div class="space-y-2 pt-5 md:pt-0">
+              <p class="text-xs text-secondaryColor">Holiday Promo</p>
+              <h3 class="card__title">GET A 25% DISCOUNT ON "Ber" Months</h3>
+              <p class="paragraph" style="color:black">Enjoy a festive season of savings with a spectacular 25% discount during the 'Ber' months!</p>
+              <a href="#" class="text-xs text-secondaryColor">Buy online</a>  
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="promo__card-2 bg-primaryColorLight dark:bg-darkColorLight flex flex-col p-5 rounded-lg md:flex-row md:items-center lg:flex-row-reverse lg:flex-1">
+            <img src="img/promo1.png" alt="promo image" class="w-40 mx-auto hover:animate-movingY md:mx-5">
+
+            <div class="space-y-2 pt-5 md:pt-0">
+              <p class="text-xs text-secondaryColor">Payday Promo</p>
+              <h3 class="card__title">GET A 10% DISCOUNT ON PAYDAY WEEK</h3>
+              <p class="paragraph" style="color:black">Get ready to save big on payday week with our exclusive 10% discount offer!</p>
+              <a href="#" class="text-xs text-secondaryColor">Buy online</a>  
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~-->
+      <section id="about">
+        <div class="container flex flex-col gap-10 md:flex-row">
+          <div class="about__img flex-1">
+            <img src="img/about1.jpg" alt="about image" class="rounded-lg">
+          </div>
+
+          <div class="about__content flex-1">
+            <h2 class="section__title">Discover Our Story:<br /> Baking Memories at Bread Basket</h2>
+            <div class="separator"></div>
+            <p class="paragraph">Bread Basket is in the market for more than a decade and we make sure that we give you the best of the best bread products in the market.
+              <br/>
+              Explore the rich history and passion behind Bread Basket, where every loaf tells a story of craftsmanship and culinary love.</p>
+            <ul class="grid grid-cols-2 py-5 space-y-1">
+              <li class="text-xs text-paragraphColor"> 
+                <i class="fa-solid fa-check text-secondaryColor"></i> 
+                Best Price
+              </li>
+              <li class="text-xs text-paragraphColor">
+                <i class="fa-solid fa-check text-secondaryColor"></i> 
+                Fresh Ingredient
+              </li>
+              <li class="text-xs text-paragraphColor"> 
+                <i class="fa-solid fa-check text-secondaryColor"></i> 
+                Best Service
+              </li>
+              <li class="text-xs text-paragraphColor">
+                <i class="fa-solid fa-check text-secondaryColor"></i> 
+                Health Protocol
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" style="color: #fff;">Talk to Us!</a>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~~-->
+      <section id="menu">
+        <div class="container">
+          <div class="max-w-md mx-auto text-center">
+            <h2 class="section__title">OUR BEST PRODUCTS</h2>
+            <div class="separator mx-auto"></div>
+            <p class="paragraph">Indulge in Our Finest Creations – Explore Our Best Products!</p>
+
+            <div class="tabs_wrap">
+              <ul class="flex flex-wrap justify-center gap-2 py-10">
+                <li data-tabs="all" class="btn bg-primaryColorLight dark:bg-darkColorLight active">All</li>
+                <li data-tabs="food" class="btn bg-primaryColorLight dark:bg-darkColorLight">Bread</li>
+                <li data-tabs="snack" class="btn bg-primaryColorLight dark:bg-darkColorLight">Cookies</li>
+                <li data-tabs="beverage" class="btn bg-primaryColorLight dark:bg-darkColorLight">Doughnuts</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="menu__items">
+            <ul class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+              <!-- food  -->
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/wheatbread.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Wheat Bread</h4>
+                    <p class="paragraph">A wholesome staple, wheat bread is celebrated for its hearty, nutty flavor and soft, nutritious crumb, making it a nutritious choice that's perfect for sandwiches, toasts, or as a versatile accompaniment to a variety of dishes.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱82.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/croissant.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Croissant</h4>
+                    <p class="paragraph">A French pastry masterpiece, the croissant is characterized by its buttery, flaky layers that melt in your mouth, offering a delicate balance of rich flavor and light, airy texture, making it a universally beloved treat for any time of day.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱42.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/baguette.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Baguette</h4>
+                    <p class="paragraph">Baguette is renowned for its long, slender shape, crispy golden crust, and soft, airy interior, making it a versatile classic that complements any meal or snack with its irresistible simplicity.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱62.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/ensaymada.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Ensaymada</h4>
+                    <p class="paragraph">A Filipino delicacy that's the perfect blend of sweet and savory, ensaymada is a soft, buttery bread generously coated with sugar and grated cheese, offering a delightful symphony of flavors and textures that's a true Filipino favorite.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱25.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/boule-bread.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Boule Bread</h4>
+                    <p class="paragraph">Known for its round, artisanal shape, crisp crust, and tender, airy interior, making it a timeless choice for those who appreciate the simplicity and excellence of traditional bread-making.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱59.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/pandecoco.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Pandecoco Bread</h4>
+                    <p class="paragraph">A beloved Filipino delight, pandecoco bread is a sweet and coconut-filled treat that brings together soft, fluffy bread and a delightful coconut filling, creating a taste of tropical paradise in every bite.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱10.00</p>
+                </div>
+              </li>
+
+              <!-- snack  -->
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/chocolate-chip-cookies.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Chocolate Chip </h4>
+                    <p class="paragraph">The epitome of cookie perfection, our chocolate chip cookies are a heavenly combination of rich, melt-in-your-mouth chocolate and buttery dough, delivering pure comfort and indulgence with every bite.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱12.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/oatmeal-oatmeal-raisin-cookie.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Oatmeal Cookie</h4>
+                    <p class="paragraph">A harmonious blend of wholesome oats and plump, juicy raisins come together in these cookies to create a chewy, comforting treat with a hint of cinnamon and warmth in every bite.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱15.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/peanut-butter-cookies.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Peanut Butter</h4>
+                    <p class="paragraph">These chewy and nutty delights are the ultimate comfort food, with a perfect balance of sweet and salty, and a rich, creamy peanut butter flavor that's impossible to resist..</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱15.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/biscotti-white-chocolate.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Biscotti</h4>
+                    <p class="paragraph">Crispy, twice-baked Italian cookies that marry the flavors of tradition and innovation, offering a satisfying crunch.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱30.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/smores.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">S'mores</h4>
+                    <p class="paragraph">A classic campfire treat reimagined for every occasion, featuring gooey marshmallows and rich chocolate sandwiched between graham crackers.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱35.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/gingerbread.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Gingerbread Cookie</h4>
+                    <p class="paragraph">These festive treats are a warm blend of spices and sweetness, offering a nostalgic taste of the holidays.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱39.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/macaron.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Macaron</h4>
+                    <p class="paragraph"> Delicate, colorful, and irresistibly elegant, our macarons are bite-sized pieces of happiness.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱55.00</p>
+                </div>
+              </li>
+
+              <!-- beverage  -->
+              <li class="item_wrap beverage">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/alcapone.png" alt="doughnuts image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Alcapone</h4>
+                    <p class="paragraph">This is a delightful twist on the classic treat, featuring a rich and silky caramel glaze, topped with a sprinkle of crushed almonds. </p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱60.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap beverage">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/berry-spears.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Berry Spears</h4>
+                    <p class="paragraph">Featuring luscious berries nestled within our fluffy, handcrafted doughnuts for a delightful taste experience.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱56.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap beverage">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/blueberry-more.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Blueberry More</h4>
+                    <p class="paragraph">An irresistible temptation, generously adorned with plump blueberries and a drizzle of sweet goodness, providing a delightful twist on the classic treat.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱68.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap beverage">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/choco-caviar-strawberry.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Choco Caviar</h4>
+                    <p class="paragraph">A harmonious blend of rich chocolate, sweet strawberries, and delicate caviar pearls, creating a decadent symphony of flavors in every bite.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱65.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap beverage">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/mona-pisa.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Mona Pisa</h4>
+                    <p class="paragraph">Our edible masterpieces that captivate your senses with their perfectly balanced flavors and artistic presentation, making every bite a work of delicious art.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱35.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap beverage">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/green-tease.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Green Tease</h4>
+                    <p class="paragraph">A tantalizing fusion of the earthy richness of matcha and the sweet allure of traditional doughnuts, offering a unique and delightful treat for the adventurous palate.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱44.00</p>
+                </div>
+              </li>
+
+              <li class="item_wrap beverage">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/why-nut.png" alt="food image" class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Why Nut</h4>
+                    <p class="paragraph"> A nutty delight that satisfies your cravings with a delightful crunch, combining the timeless joy of doughnuts with the irresistible allure of roasted nuts.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">₱32.00</p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Review ~~~~~~~~~~~~~~~-->
+      <section id="review" class="bg-primaryColorLight dark:bg-darkColorLight py-20">
+        <div class="customer__review container">
+          <div class="max-w-md mx-auto text-center">
+            <h2 class="section__title">CUSTOMER REVIEW</h2>
+            <div class="separator mx-auto"></div>
+            <p class="paragraph">Hear What Our Happy Customers Have to Say!</p>
+          </div>
+
+          <div class="swiper py-10">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                  <p class="paragraph">Absolutely love the artisanal bread selection at Bread Basket! The sourdough is my personal favorite, with its perfect crust and airy crumb. Always a delightful experience with every bite!</p>
+                  <div class="flex items-center">
+                    <img src="img/review-1.jpg" alt="review image" class="w-12 h-12 rounded-full">
+                    <div class="ml-2">
+                      <p class="font-oswald uppercase">John Reyes</p>
+                      <p class="paragraph">Businessman</p>
+                    </div>
+                    <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                  <p class="paragraph">The cinnamon rolls from Bread Basket are like little bites of heaven. They're incredibly soft and gooey with just the right amount of sweetness. A must-try for any pastry lover!</p>
+                  <div class="flex items-center">
+                    <img src="img/review-2.jpg" alt="review image" class="w-12 h-12 rounded-full">
+                    <div class="ml-2">
+                      <p class="font-oswald uppercase">Ann Recio</p>
+                      <p class="paragraph">Interior Designer</p>
+                    </div>
+                    <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                  <p class="paragraph">I ordered the gluten-free bread from Bread Basket, and I couldn't be happier. It's so hard to find gluten-free bread that tastes this good. Thank you for making it possible!</p>
+                  <div class="flex items-center">
+                    <img src="img/review-3.jpg" alt="review image" class="w-12 h-12 rounded-full">
+                    <div class="ml-2">
+                      <p class="font-oswald uppercase">Matt Dizon</p>
+                      <p class="paragraph">Gym Instructor</p>
+                    </div>
+                    <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                  <p class="paragraph">The chocolate chip cookies from Bread Basket are simply addictive! They're the perfect balance of crispy on the outside and chewy on the inside. I can never resist grabbing more.</p>
+                  <div class="flex items-center">
+                    <img src="img/review-4.jpg" alt="review image" class="w-12 h-12 rounded-full">
+                    <div class="ml-2">
+                      <p class="font-oswald uppercase">Trina Villanueva</p>
+                      <p class="paragraph">Accountant</p>
+                    </div>
+                    <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                  <p class="paragraph">I had the pleasure of trying the baguettes from Bread Basket, and they exceeded my expectations. Crisp on the outside, airy on the inside. So good and fluffy!</p>
+                  <div class="flex items-center">
+                    <img src="img/review-5.jpg" alt="review image" class="w-12 h-12 rounded-full">
+                    <div class="ml-2">
+                      <p class="font-oswald uppercase">Harvey Pedron</p>
+                      <p class="paragraph">Designer</p>
+                    </div>
+                    <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Contact ~~~~~~~~~~~~~~~-->
+      <section id="contact" class="bg-category2 py-16">
+        <div class="container flex flex-col gap-5 md:items-center md:flex-row">
+          <div class="space-y-4 md:flex-1">
+            <h2 class="section__title text-blackColor">GET EXCLUSIVE UPDATE</h2>
+            <p class="text-sm">Get in touch with us at Bread Basket - we're here to assist you with all your questions and cravings!</p>
+          </div>
+
+         
+          <div class="flex flex-col gap-3 md:flex-row md:flex-1">
+            <input type="email" name="email"  placeholder="Email address" class="p-2 text-blackColor rounded-lg outline-none md:w-full">
+            <a href="" class="flex items-center justify-center gap-2 btn bg-blackColor hover:opacity-75">
+              <i class="fa-solid fa-paper-plane"></i>
+              Subscribe
+            </a>
+            
+          </div>
+         
+        </div>
+      </section>
+    </main>
+    <!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
+    <footer>
+      <section class="footer">
+        <div class="container">
+          <ul class="grid grid-cols-1 items-start gap-5 pb-5 md:grid-cols-2 lg:grid-cols-4">
+            <li>
+              <div class="space-y-3">
+                <a href="" class="text-4xl font-oswald uppercase">
+                  Bread<span class="text-secondaryColor">Basket</span>
+                </a>
+
+                <p class="text-xs">
+                  Bread Basket is your trusted destination for handcrafted artisanal bread and baked goods that elevate your culinary experience. Our commitment to quality and tradition ensures every bite is a delightful memory in the making.
+                </p>
+              </div>
+            </li>
+
+            <!-- <li>
+              <div class="flex flex-col gap-3">
+                <h3 class="text-lg uppercase font-oswald">SUPPORT</h3>
+                <a href="" class="text-xs hover:text-secondaryColor">FAQ's</a>
+                <a href="" class="text-xs hover:text-secondaryColor">Privacy Policy</a>
+                <a href="" class="text-xs hover:text-secondaryColor">Term & Condition</a>
+                <a href="" class="text-xs hover:text-secondaryColor">Contact</a>
+              </div>
+            </li> -->
+
+            <li class="space-y-8">
+              <div class="space-y-2">
+                <h3 class="text-lg uppercase font-oswald">phone</h3>
+
+                <p class="flex items-center gap-2 text-xs">
+                  <i class="fa-solid fa-phone text-lg text-secondaryColor"></i>
+                  +63 995 558 3712
+                </p>
+              </div>
+
+              <div class="space-y-2">
+                <h3 class="text-lg uppercase font-oswald">email</h3>
+
+                <p class="flex items-center gap-2 text-xs">
+                  <i class="fa-solid fa-envelope text-lg text-secondaryColor"></i>
+                  burger.info@email.com
+                </p>
+              </div>
+            </li>
+
+            <li class="space-y-8">
+              <div class="space-y-2">
+                <h3 class="text-lg uppercase font-oswald">address</h3>
+
+                <p class="flex items-center gap-2 text-xs">
+                  <i class="fa-solid fa-location-dot text-lg text-secondaryColor"></i>
+                  Makati, City
+                </p>
+              </div>
+
+              <div class="space-y-2">
+                <h3 class="text-lg uppercase font-oswald">follow us</h3>
+
+                <div class="space-x-3">
+                  <i class="fa-brands fa-facebook-f text-lg cursor-pointer text-secondaryColor hover:-translate-y-1 ease-in duration-200"></i>
+                  <i class="fa-brands fa-twitter text-lg cursor-pointer text-secondaryColor hover:-translate-y-1 ease-in duration-200"></i>
+                  <i class="fa-brands fa-square-instagram text-lg cursor-pointer text-secondaryColor hover:-translate-y-1 ease-in duration-200"></i>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="flex flex-col items-center border-t border-primaryColorLight dark:border-darkColorLight py-5 md:flex-row md:justify-between">
+            <p class="paragraph">Designed by Trisha Ann Dela Torre</p>
+            <p class="paragraph">Copyright © 2023. All rights reserved.</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!--~~~~~~~~~~~~~~~ Scroll Up ~~~~~~~~~~~~~~~-->
+    <a href="#" class="fixed right-4 -bottom-1/2 bg-secondaryColor shadow-sm inline-block px-4 py-2 rounded-full text-lg text-blackColor z-50 hover:-translate-y-1 ease-in duration-200" id="scroll-up">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!--~~~~~~~~~~~~~~~ Swiper JS ~~~~~~~~~~~~~~~-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper('.swiper', {
+        speed: 400,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        },
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        grabCursor: true,
+        breakpoints: {
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 1,
+          },
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 2,
+          },
+          // when window width is >= 1024px
+          1024: {
+            slidesPerView: 3,
+          }
+        }
+      });
+    </script>
+
+    <!--~~~~~~~~~~~~~~~ Scroll Reveal ~~~~~~~~~~~~~~~-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--~~~~~~~~~~~~~~~ Main.js ~~~~~~~~~~~~~~~-->
+    <script src="main.js"></script>
+  </body>
+</html>
